@@ -1,19 +1,11 @@
-def isAutomorphic(N):
-	if N < 0:
-	    N = -N
-	sq = N * N
-	while (N > 0):
-	    if (N % 10 != sq % 10):
-	        return False
-	    N //= 10
-	    sq //= 10
-	return True
+n = int(input())
+sq = n**2
+l=len(str(n))
+d = list(str(sq))[-l:]
+res = int("".join(map(str, d)))
 
-
-N = int(input())
-if isAutomorphic(N) :
-    print ("Automorphic Number")
+if n==res:
+    print("Automorphic Number")
 else:
-    print ("Not an Automorphic Number")
-
+    print("Not an Automorphic Number")
 
