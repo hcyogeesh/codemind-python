@@ -9,5 +9,5 @@ for i in lst:
     if i%2==1:
         odd.append(i)
 
-even.extend(odd)
-print(*even)
+print(*even, end=" ")
+print(*odd)
